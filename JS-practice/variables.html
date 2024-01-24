@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>variables</title>
+</head>
+<body>
+    <p><button onclick="console.log(`cart quantity:  ${quantity}
+         `)"> Show quantity</button>
+        <!--we can also use ${ quantity}-->
+    <button onclick="
+    console.log('Added to cart: '+ (++quantity) +'  item  ');
+    ">Add to cart</button>
+    <button onclick="
+    quantity=quantity+2;
+     console.log('Added to cart'+(quantity)+'  items');
+    ">+2</button>
+    <button onclick="
+    quantity=quantity+3;
+    console.log('Added to cart'+(quantity)+'items');
+    ">+3</button>
+    <button onclick="
+        quantity=0;
+        console.log('cart was reset');
+        console.log('cart quantity'+quantity)
+    ">Reset Cart</button>
+    </p>
+    <script>
+        let quantity=0;
+        document.write(10+20);
+    </script>
+</body>
+</html>
