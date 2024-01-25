@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a={
+            a:'hello'
+        }
+        console.log(a.a);//we can give same names to object and property
+        const b={
+            b:'hello'
+        }
+        console.log(a===b);//return false
+        //because references are diferent a,b store different addresses hence give false
+        console.log(a.a===b.b);//return true
+    </script>
+</body>
+</html>

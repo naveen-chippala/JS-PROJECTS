@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //autoboxing
+        console.log("hello".length)
+        console.log("hello".toUpperCase());
+        //autoboxing canbe done only with numbers strings and booleans
+        //not with null and undefined
+        const a={
+            name:"naveen",
+            age:24
+        }
+        //destructuring
+        //if we are having same name of variable and property we use destructuring
+       // const name=a.name;//valid but instead we can write same as
+        let {name,age}=a;//easier way to take properties out of object
+
+        console.log(name);
+        console.log(age);
+//obect property inside another object using property name
+         //it is called short hand property
+         const person ={
+            firstName : name
+         };
+         console.log(person);//print person object with firstname:"naveen"
+        //we can give default value to the key if it is not present in object using
+        //default values syntax
+        //let {country='India',city='Bangalore'} = a;
+        //object rest spread operator
+        /*const person={
+            firstName:'Naveen',
+            lastName:'Kumar'
+            };*/
+            //const person={...a};
+            //console.log(person);///it gives error but works for arrays
+            const array = [1, 2, 3];
+const obj = { ...array }; 
+console.log(obj);//const array = [1, 2, 3];
+//short hand method
+const car={
+    model:"Mustang",
+   /* method:function hi(){
+        console.log("Hello World");
+    }*/ // instead we can write same funcctions as
+    hi(){
+        console.log("Hello World hello");
+    }
+};
+car.hi();
+    
+            
+    </script>
+</body>
+</html>

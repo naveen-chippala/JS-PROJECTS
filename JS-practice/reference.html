@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>how objects work</h1>
+    <script>
+        const a={
+            name:"naveen"
+        };
+        //here a is just a reference which holds the address of the name property
+        const b=a;
+        console.log(b);
+        //eventhought we use const we can change the values of the objects 
+        //for examople
+        a.name="chippala";
+        console.log(a);
+        console.log("5"===5);
+        const d=(10>0) || (11<0);//default operator
+//in default operator it checks two sides whether or not left side is true or false
+        console.log(d);
+        let e= (6>0) &&(6<0);
+        console.log(e);
+        //in guard operator if left side is falsethen it doesnt even go to the right side
+        //if left side is true then only it goes to thhe right and checks for the condition
+        const ac=console.log("hi")||("hello".length>0);
+        console.log(ac);//prints true
+
+    </script>
+</body>
+</html>

@@ -31,20 +31,25 @@
     >
       Scissors
     </button>
-    <button onclick="
+    <button
+      onclick="
     score.wins=0;
     score.losses=0;
     score.ties=0;
     localStorage.removeItem('score');
-    ">Reset</button>
+    "
+    >
+      Reset
+    </button>
 
     <script>
       //score updating
-      const score = JSON.parse(localStorage.getItem("score")) ||{
-         wins: 0,
-          losses: 0, 
-          ties: 0 } ;
- /*
+      const score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+        ties: 0,
+      };
+      /*
       if(score=== null){
         score = { wins: 0, losses: 0, ties: 0 };
       } we can use default operator instead of this*/
@@ -52,7 +57,7 @@
         const computerMove = pickComputerMove();
 
         let result = "";
-        
+
         if (playerMove === "scissors") {
           if (computerMove === "rock") {
             result = "lose";
@@ -87,12 +92,11 @@
         }
         alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
         wins: ${score.wins} ,Losses: ${score.losses} Ties:${score.ties}`);
-        localStorage.setItem("score",JSON.stringify(score));
-        
+        localStorage.setItem("score", JSON.stringify(score));
       }
       //console.log(localStorage.removeItem("score"));//to remove using key val
       //console.log();//always use string inside
-       // console.log(localStorage.key(1));//Returns the name of the nth key in the storage 
+      // console.log(localStorage.key(1));//Returns the name of the nth key in the storage
       function pickComputerMove() {
         const randomNumber = Math.random();
 
