@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoM-practice</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <button>sbmit</button>
+    <button class="js-button">sbmit</button>
+    <script>
+      //document.body="hello";
+      //document.body.innerHTML="hell";
+      //document.title="hihi";
+      //console.log(document.body.innerHTML);
+      //document.body.innerHTML="changed";
+      //console.log(document.body);
+      //document.body.innerHTML="<button>submit</submit>";
+      console.log(document.querySelector("button"));
+      document.querySelector("button").innerHTML = "hello";//changes on the top elemnt when we have two buttons
+      document.querySelector(".js-button").innerHTML = "welcome";//used class attribute so changes second
+      var buttonElement=document.querySelector('.js-button').innerHTML;
+      var buttonElement=document.querySelector('.js-button');//when we let and const we cannot use same variable again
+      console.log(buttonElement);
+    </script>
+  </body>
+</html>
