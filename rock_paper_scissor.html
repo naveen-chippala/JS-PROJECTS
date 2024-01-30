@@ -31,6 +31,7 @@
     >
       Scissors
     </button>
+    <p class="js-score"></p>
     <button
       onclick="
     score.wins=0;
@@ -49,6 +50,9 @@
         losses: 0,
         ties: 0,
       };
+      //document.querySelector(".js-score")
+      //.innerHTML=`wins: ${score.wins} Losses: ${score.losses} Ties:${score.ties}`;
+      updateScoreElement();
       /*
       if(score=== null){
         score = { wins: 0, losses: 0, ties: 0 };
@@ -90,13 +94,18 @@
         } else if (result === "tie") {
           score.ties += 1;
         }
-        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-        wins: ${score.wins} ,Losses: ${score.losses} Ties:${score.ties}`);
+        updateScoreElement();
+        //alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+        //wins: ${score.wins} ,Losses: ${score.losses} Ties:${score.ties}`);
         localStorage.setItem("score", JSON.stringify(score));
       }
       //console.log(localStorage.removeItem("score"));//to remove using key val
       //console.log();//always use string inside
       // console.log(localStorage.key(1));//Returns the name of the nth key in the storage
+      function updateScoreElement(){
+        document.querySelector('.js-score')
+        .innerHTML= `wins: ${score.wins} ,Losses: ${score.losses} Ties:${score.ties}`;
+      }
       function pickComputerMove() {
         const randomNumber = Math.random();
 
